@@ -1,0 +1,150 @@
+section.user {
+	padding: 70px 0 100px;
+
+	.container {
+		max-width: 900px;
+
+		@media screen and (max-width: 1000px) {
+			width: 90%;
+		}
+	}
+
+	h3 {
+		margin-top: 0;
+		font-size: 1.125rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.products {
+		@include clearfix;
+		padding: 50px 0;
+
+		.user-products {
+			@include clearfix;
+
+			a.product {
+				@include clearfix;
+				background-color: #fff;
+				padding: 7px 15px;
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				border-color: #eee;
+				display: block;
+
+				&:first-child {
+					border-top: 1px solid #eee;
+				}
+
+				&:hover {
+					background-color: #f9f9f9;
+				}
+
+				img {
+					width: 45px;
+					float: left;
+				}
+
+				h3, h4 {
+					float: left;
+				}
+
+				h3 {
+					font-weight: 300;
+					margin: 0 70px 0 40px;
+					font-size: 1.25rem;
+					text-transform: none;
+				    padding: 4px 0;
+
+					span {
+						font-weight: 600;
+						display: block;
+						margin-left: 10px;
+					}
+				}
+
+				h4 {
+					text-transform: none;
+					font-weight: 400;
+					margin: 0 60px 0 0;
+					padding: 15px 0;
+				}
+
+				p {
+					margin: 0;
+					float: right;
+					padding: 13px 0;
+					font-weight: 700;
+					text-transform: uppercase;
+					font-size: 0.75rem;
+					letter-spacing: 1px;
+
+					span {
+						margin-right: 11px;
+						color: $black;
+					}
+				}
+
+				.angle-right {
+				    width: 7px;
+				    fill: $blue;
+			        vertical-align: -5px;
+				}
+
+				@media screen and (max-width: 850px) {
+
+					h3 {
+						font-size: 1rem;
+						padding: 9px 0;
+						margin: 0 40px;
+					}
+
+					h4 {
+						font-size: 0.875rem;
+						padding: 19px 0;
+						margin: 0 40px 0 0;
+					}
+
+					p {
+						span {
+							display: none;
+						}
+					}
+				}
+
+				@media screen and (max-width: 670px) {
+
+					h3 {
+						margin: 0 35px;
+
+						span {
+							margin: 0;
+						}
+					}
+				}
+
+				@media screen and (max-width: 550px) {
+
+					h3 {
+					    padding: 18px 0;
+
+						span {
+							display: inline;
+						}
+					}
+
+					h4 {
+						display: none;
+					}
+				}
+			}
+
+			p {
+
+				span {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

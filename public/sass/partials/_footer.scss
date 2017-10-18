@@ -1,0 +1,117 @@
+footer {
+	@include clearfix;
+	width: 100%;
+	background-color: $black;
+	background-image: url('../images/logo_footer_blue_shadow.png');
+	background-repeat: no-repeat;
+    background-size: 42%;
+    background-position: center right;
+    padding: 80px 0 0;
+
+    @media screen and (max-width: 1300px) {
+    	background-size: 46%;
+    	background-position: 116% center;
+    }
+
+    @media screen and (max-width: 1300px) {
+    	background-size: 56%;
+    }
+
+    @media screen and (max-width: 1000px) {
+    	background-size: 60%;
+    	background-position: 120% center;
+    }
+
+    @media screen and (max-width: 900px) {
+    	background-size: 65%;
+    	background-position: 140% center;
+    }
+
+    @media screen and (max-width: 800px) {
+    	background-size: 75%;
+    	background-position: 200% center;
+    }
+
+    @media screen and (max-width: 700px) {
+	    background-size: 133%;
+		background-position: -140% center;
+    }
+
+	.container {
+
+	    @media screen and (max-width: 1100px) {
+	    	width: 95%;
+	    }
+	}
+
+	.logo {
+		width: 100%;
+
+	    img {
+	    	width: 350px;
+	    	margin: 0 0 55px;
+
+	    	@media screen and (max-width: 400px) {
+	    		width: 96%;
+	    		margin: 0 2% 50px;
+	    	}
+	    }
+	}
+
+    .column {
+    	width: 33.33333%;
+    	float: left;
+    	padding: 0 15px;
+
+    	@media screen and (max-width: 700px) {
+    		width: 100%;
+    		margin: 20px 0;
+    	}
+    }
+
+    h4 {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 14px;
+		margin-bottom: 30px;
+		color: #ccc;
+    }
+
+    li {
+    	margin-bottom: 25px;
+
+    	a {
+			color: #7a7a7a;
+			font-size: 0.875rem;
+
+			&:hover {
+				color: #ddd;
+			}
+    	}
+    }
+
+    p {
+    	float: left;
+    	clear: both;
+    	width: 75%;
+	    color: #3e3e3e;
+	    border-top: 1px solid #323638;
+    	padding: 20px 0;
+    	margin: 65px 0 0;
+    	font-size: 0.875rem;
+
+    	@media screen and (max-width: 1300px) {
+    		width: 62%;
+    	}
+
+    	@media screen and (max-width: 800px) {
+    		border: none;
+    	}
+
+    	@media screen and (max-width: 550px) {
+    		width: 100%;
+    		text-align: center;
+    		padding: 20px;
+    	}
+    }
+}

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	section.register-page
+		.container
+			.signup
+				h2 Create an Account
+				h3 Gain access to your <span>Analytics4Athletes</span> data.
+				form.form(action="/register" method="POST")
+					span.first
+						label(for="firstName") First Name
+						input(type="text" name="firstName" value=firstName)
+					span
+						label(for="lastName") Last Name
+						input(type="text" name="lastName" value=lastName)
+					span.first
+						label(for="email") Email Address
+						input(type="email" name="email" value=email)
+					span
+						label(for="phone") Phone Number
+						input(type="text" name="phone" value=phone)
+					label(for="password") Password
+					input(type="password" name="password")
+					label(for="password-confirm") Confirm Password
+					input(type="password" name="password-confirm")
+					input.button(type="submit" value="Create Account")
+				p Already have an account? 
+					a(href="/login") Login here
+					|.

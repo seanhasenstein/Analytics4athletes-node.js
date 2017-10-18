@@ -1,0 +1,14 @@
+mixin sidebar()
+	.sidebar
+		a.sidebar-nav Player Development Menu
+			!= h.icon('angle-down')
+		.sidebar-dropdown
+			.categories
+				//- h3 Choose a category:
+				a.category(href="/product-example/analytical-report" class=(currentPath.endsWith('/analytical-report') ? 'nav-active' : '')) Analytical Report
+				each item in h.scottieLindsey
+					.label(class=(currentPath.endsWith(item.slug) ? 'nav-active open' : '')) <span>#{item.label}</span>
+						div.dropdown
+							a(href=`/product-example/${item.vbSlug}` class=(currentPath.endsWith(item.vbSlug) ? 'active' : '')) <span>#{item.category}</span>
+							if item.woSlug
+								a(href=`/product-example/${item.woSlug}` class=(currentPath.endsWith(item.woSlug) ? 'active' : '')) <span>#{item.category2}</span>

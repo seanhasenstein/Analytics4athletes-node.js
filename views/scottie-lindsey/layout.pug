@@ -1,0 +1,11 @@
+extends ../layout
+
+include mixins/_product-header
+include mixins/_sidebar
+
+block content
+	section.product-home
+		+sidebar()
+		.content
+			+productHeader()
+			block mainContent

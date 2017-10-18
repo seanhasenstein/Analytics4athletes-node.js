@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	section.contact
+		.into
+				h1 Contact Us
+		.container
+			.details
+				h2 Get in Touch
+				p For questions or more information regarding an analytics package, please fill out this form and we will respond to your inquiry as soon as we can.
+				hr
+				p You can also email us at <a href="mailto:analytics4athletes@gmail.com">analytics4athletes@gmail.com</a>.
+			form(action="/contact" method="POST")
+				label(for="name") Your Name
+				input(type="text" name="name" id="name" value=name)
+				.half
+					label(for="email") Your Email Address
+					input(type="email" name="email" id="email" value=email)
+				.half
+					label(for="phone") Your Phone Number
+					input(type="phone" name="phone" id="phone" value=phone)
+				label(for="message") Your Message
+				textarea(name="message")=message
+				input(type="submit" value="Send Message" class="button")

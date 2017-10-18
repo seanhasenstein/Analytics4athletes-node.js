@@ -1,0 +1,20 @@
+extends layout
+
+include mixins/_scottieLindseyLink
+
+block content
+	section.user
+		.container
+			h3 #{user.firstName}'s' Analytics:
+			.products
+				.user-products
+
+					if user.id === '59bfdcb9e4968939bbf5e258'
+						+scottieLindseyLink()
+					else if user.id === '59d5a36268216426ecc854e6'
+						+scottieLindseyLink()
+					else if user.id === '59dfb8ebe24ff7430c3f46fc'
+						+scottieLindseyLink()
+					else
+						p We will contact you at <span>#{user.email}</span> when your analytics are ready.
+						

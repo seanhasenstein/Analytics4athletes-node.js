@@ -1,0 +1,337 @@
+header {
+	margin: 0 auto;
+	width: 100%;
+	padding: 8px 50px;
+	position: relative;
+	display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    z-index: 10;
+
+    @media screen and (max-width: 1100px) {
+		padding: 8px 20px;
+	}
+
+	@media screen and (max-width: 900px) {
+		display: block;
+		padding: 0;
+	}
+}
+
+nav, .nav-login {
+	padding: 21px 0;
+}
+
+.brand {
+
+	@media screen and (max-width: 900px) {
+		box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+		padding: 17px 0;
+
+		a {
+			pointer-events: none;
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 1000px) {
+		padding: 10px 0;
+	}
+}
+
+button#mobile-menu-toggle {
+	display: none;
+
+	@media screen and (max-width: 900px) {
+		display: inline-block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		outline: none;
+		cursor: pointer;
+		border: 0;
+		background: transparent;
+		top: 40px;
+		left: 40px;
+
+		&.open {
+
+			&:before {
+		    	transform: rotate(45deg);
+		    }
+
+		    &:after {
+		    	transform: rotate(-45deg);
+		    }
+		}
+
+		&:before {
+		    top: 5px;
+		}
+
+		&:after {
+		    bottom: 5px;
+		}
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 17px;
+			height: 2px;
+			background: $blue;
+			transform-origin: 3px center;
+			transition: transform .2s ease-in-out;
+		}
+	}
+}
+
+img.logo {
+	width: 200px;
+	margin-left: 15px;
+
+	@media screen and (max-width: 1000px) {
+		width: 150px;
+		float: none;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+nav {
+
+	.angle-down {
+	    width: 12px;
+	    fill: #aaa;
+	    display: inline-block;
+	    vertical-align: -4px;
+	    margin-left: 2px;
+
+	    @media screen and (max-width: 900px) {
+	    	display: none;
+	    }
+	}
+
+    @media screen and (max-width: 900px) {
+    	padding: 0;
+    	text-align: left;
+    	clear: both;
+    	float: left;
+    	width: 100%;
+    	height: 100%;
+    	display: none;
+
+    	&.open {
+    		display: block;
+    	}
+    }
+
+	ul {
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			padding: 13px 35px;
+
+			@media screen and (max-width: 1000px) {
+				padding: 13px 30px;
+			}
+
+			@media screen and (max-width: 900px) {
+				display: block;
+				width: 100%;
+				text-align: left;
+				border-bottom: 1px solid #eee;
+				padding: 16px 35px;
+			}
+			
+			@media screen and (min-width: 901px) {
+				
+				a {
+
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	li.dropdown {
+		position: relative;
+		cursor: pointer;
+
+		span.one, span.two {
+			display: none;
+		}
+
+		@media screen and (max-width: 900px) {
+
+			span.one, span.two {
+				display: block;
+				position: absolute;
+				right: 20px;
+				top: 24px;
+				height: 2px;
+				width: 10px;
+				background-color: #000;
+			}
+
+			span.two {
+				transform: rotate(90deg);
+			}
+
+			&.open {
+
+				span.two {
+					display: none;
+				}
+
+				ul {
+					display: block;
+					opacity: 1;
+					padding-top: 10px;
+				}
+			}
+		}
+
+		&:hover {
+			
+			@media screen and (min-width: 901px) {
+
+				ul {
+					visibility: visible;
+					opacity: 1;
+					top: 42px;
+				}
+			}
+		}
+
+		ul {
+			padding: 0;
+			background-color: $black;
+			position: absolute;
+			width: 215px;
+		    top: 42px;
+    		left: 35px;
+    		border-radius: 3px;
+			box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2), 20px 0 30px -10px rgba(0,0,0,0.2), -20px 0 30px -10px rgba(0,0,0,0.2);
+			opacity: 0;
+			visibility: hidden;
+			top: 38px;
+			transition: 400ms all ease-in-out;
+
+			@media screen and (max-width: 900px) {
+				display: none;
+				position: relative;
+				border-color: #000;
+				border-radius: 0;
+				box-shadow: none;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: #fff;
+				opacity: 1;
+				visibility: visible;
+			}
+
+			li {
+				display: block;
+				padding: 0;
+
+				@media screen and (max-width: 900px) {
+					border: none;
+				}
+
+				a {
+					color: #ccc;
+					padding: 15px 25px;
+					display: block;
+					cursor: pointer;
+					transition: all 50ms ease-in;
+					fill-mode: forwards;
+
+					&:hover {
+						color: #fff;
+					}
+
+					@media screen and (max-width: 900px) {
+						color: $black;
+
+						&:hover {
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-login {
+
+	@media screen and (max-width: 900px) {
+		display: none;
+		padding: 0;
+
+		&.open {
+			display: inline-block;
+	    	width: 100%;
+		}
+	}
+
+	ul.user {
+	    position: relative;
+    	padding-left: 32px;
+
+    	@media screen and (max-width: 900px) {
+		    padding: 0 5px;
+    	}
+
+		li {
+			display: inline-block;
+			padding: 13px 15px;
+
+			@media screen and (max-width: 900px) {
+				padding: 16px 28px;
+				display: block;
+				border-bottom: 1px solid #eee;
+			}
+
+			.user-icon {
+			    display: inline-block;
+			    width: 18px;
+			    margin-right: 7px;
+			    vertical-align: -3px;
+			    fill: $black;
+			    transition: fill 250ms linear;
+
+			    @media screen and (max-width: 900px) {
+				    margin-right: 10px;
+		    	}
+			}
+
+			a {
+				color: $black;
+				transition: color 250ms linear;
+
+				&:hover {
+					color: $red;
+
+					@media screen and (max-width: 900px) {
+					    color: $black;
+			    	}
+
+					.user-icon {
+						fill: $red;
+
+						@media screen and (max-width: 900px) {
+						    fill: $black;
+				    	}
+					}
+				}
+			}
+		}
+	}
+}

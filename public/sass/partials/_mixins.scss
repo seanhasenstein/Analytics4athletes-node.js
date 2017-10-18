@@ -1,0 +1,103 @@
+@mixin clearfix {
+
+	&:before, &:after {
+	    display: table;
+	    content: " ";
+	}
+
+	&:before {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+
+	&:after {
+	    clear: both;
+	}
+}
+
+@mixin button {
+	background-color: $red;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+	padding: 13px 20px;
+	display: inline-block;
+	position: relative;
+	border-radius: 3px;
+	cursor: pointer;
+	color: #fff;
+	letter-spacing: 0.5px;
+	box-shadow: inset 0px -17px 32px 0 rgba(0, 0, 0, 0.2), 0px 17px 10px -10px rgba(0,0,0,0.25);
+	transition: all 350ms ease-in-out;
+
+	&:hover {
+	    box-shadow: inset 0px -10px 32px 0 rgba(0, 0, 0, 0.2), 0 27px 20px -16px rgba(0,0,0,0.3);
+	}
+}
+
+@mixin productHeader {
+
+	.productHeader {
+		@include clearfix;
+		margin: 0 0 50px;
+		padding-bottom: 25px;
+		border-bottom: 2px solid #ebebeb;
+
+		img {
+			width: 70px;
+			float: left;
+		}
+
+		.bio {
+			float: left;
+			margin-left: 20px;
+		}
+
+		h3, h4 {
+			text-align: left;
+		}
+
+		h3 {
+			margin-top: 0px;
+			font-size: 1.75rem;
+			font-weight: 700;
+
+			span {
+				font-weight: 300;
+			}
+		}
+
+		h4 {
+			margin-bottom: 30px;
+			font-style: italic;
+		}
+
+		@media screen and (max-width: 900px) {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+
+		@media screen and (max-width: 750px) {
+
+			img {
+				width: 18%;
+			}
+
+			.bio {
+				width: 78%;
+				margin-left: 4%;
+			}
+		}
+
+		@media screen and (max-width: 500px) {
+
+			img {
+				width: 27%;
+			}
+
+			.bio {
+				width: 70%;
+				margin-left: 3%;
+			}
+		}
+	}
+}

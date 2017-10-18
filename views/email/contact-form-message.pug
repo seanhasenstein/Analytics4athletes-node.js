@@ -1,0 +1,10 @@
+extends email-layout
+
+block content
+	h3 Contact Form Message from #{senderName}
+	ul
+		li Name: #{senderName}
+		li Email: #{senderEmail}
+		li Phone: #{senderPhone}
+		li.message Message:
+		li #{senderMessage}

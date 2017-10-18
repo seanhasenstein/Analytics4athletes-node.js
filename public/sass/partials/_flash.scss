@@ -1,0 +1,54 @@
+.flash-messages {
+
+	.container {
+		max-width: 500px;
+	}
+
+	.flash {
+		@include clearfix;
+		width: 100%;
+		display: block;
+		padding: 8px 16px;
+		margin: 20px 0;
+		border: 1px solid rgba(249,59,68,0.4);
+
+		p {
+			display: inline-block;
+			float: left;
+			margin: 0;
+			font-size: 0.875rem;
+			color: $black;
+			font-weight: 400;
+		}
+
+		button.flash_remove {
+			float: right;
+		    margin: 3px 0;
+			background: transparent;
+			border: none;
+			box-shadow: none;
+			outline: none;
+			cursor: pointer;
+			font-weight: 300;
+			font-size: 0.875rem;
+		}
+
+		&.flash-error {
+    		background-color: #F1D9DC;
+		    border: 1px solid #E9D0D6;
+
+		    p {
+		    	color: #814E50;
+		    }
+		}
+
+		&.flash-success {
+		    background-color: #DCECD3;
+		    border: 1px solid #D8E3CC;
+
+		    p {
+		    	color: #3F5738;
+		    }
+		}
+	}
+}

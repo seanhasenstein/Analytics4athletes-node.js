@@ -1,0 +1,69 @@
+doctype html
+html
+	head
+		title= `${title} | ${h.siteName}`
+		link(href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet")
+		link(rel='stylesheet', href='/dist/style.css')
+		link(rel="shortcut icon" type="image/png" href="/images/favicon.png")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body
+		block header
+			header
+				.brand
+					button#mobile-menu-toggle
+					a(href="/"): img.logo(src="/images/logo_nav.png" alt="Analytics 4 Athletes")
+				nav
+					ul.nav
+						li.dropdown Products 
+							!= h.icon('angle-down')
+							span.one
+							span.two
+							ul
+								li: a(href="/player-analysis") Player Analysis
+								li: a(href="/player-development") Player Development
+								li: a(href="/team-scouting-report") Team Scouting Report
+								li: a(href="/product-example/analytical-report") Product Examples
+						li: a(href="/about") About
+						li: a(href="/blog") Blog
+				.nav-login
+					ul.user
+						if user
+							li: a(href='/user')
+								!= h.icon('user-circle')
+								| #{user.firstName}'s Analytics
+							li: a(href="/logout") Logout
+						else
+							li: a(href="/login") 
+								!= h.icon('user-circle')
+								| Register / Login
+		block messages
+			if locals.flashes
+				.flash-messages
+					.container
+						- const categories = Object.keys(locals.flashes)
+						each category in categories
+							each message in flashes[category]
+								.flash(class=`flash-${category}`)
+									p.flash_text!= message
+									button.flash_remove(onClick="this.parentElement.remove()") &times;
+		block content
+		block footer
+			footer
+				.container
+					.logo
+						img(src="/images/logo_text.png" alt="Analytics4Athletes")
+					.column
+						h4 Products
+						ul
+							li: a(href="/player-analysis") Player Analysis
+							li: a(href="/player-development") Player Development
+							li: a(href="/team-scouting-report") Team Scouting Report
+							li: a(href="/product-example/analytical-report") Product Examples
+					.column
+						h4 Company
+						ul
+							li: a(href="/about") About Us
+							li: a(href="/contact") Contact Us
+					p &copy; 2017 Analytics4Athletes. All Rights Reserved.
+		block scripts
+			script(src="/dist/App.bundle.js")
