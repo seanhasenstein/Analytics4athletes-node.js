@@ -410,6 +410,12 @@ template {
 [hidden] {
   display: none; }
 
+pre.error {
+  padding: 5rem;
+  background-color: #fff;
+  line-height: 3;
+  white-space: pre-line; }
+
 .container {
   max-width: 1000px;
   margin: 0 auto; }
@@ -424,6 +430,21 @@ template {
   @media screen and (max-width: 1100px) {
     .container {
       width: 90%; } }
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 0 0; }
+  .inner h2 {
+    text-align: left;
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 0 0 40px; }
+  @media (max-width: 900px) {
+    .inner {
+      padding: 100px 2rem 0; }
+      .inner h2, .inner p {
+        text-align: center; } }
 
 section {
   width: 100%; }

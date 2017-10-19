@@ -8,6 +8,27 @@
 	}
 }
 
+.inner {
+	max-width: 900px;
+	margin: 0 auto;
+    padding: 70px 0 0;
+
+	h2 {
+	    text-align: left;
+	    font-weight: 800;
+	    font-size: 3rem;
+	    margin: 0 0 40px;
+	}
+
+	@media (max-width: 900px) {
+	    padding: 100px 2rem 0;
+
+	    h2, p {
+	    	text-align: center;
+	    }
+	}
+}
+
 section {
 	@include clearfix;
 	width: 100%;
