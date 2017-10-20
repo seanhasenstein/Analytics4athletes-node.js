@@ -431,19 +431,19 @@ pre.error {
     .container {
       width: 90%; } }
 
-.inner {
+.inner-error {
   max-width: 900px;
   margin: 0 auto;
   padding: 70px 0 0; }
-  .inner h2 {
+  .inner-error h2 {
     text-align: left;
     font-weight: 800;
     font-size: 3rem;
     margin: 0 0 40px; }
   @media (max-width: 900px) {
-    .inner {
+    .inner-error {
       padding: 100px 2rem 0; }
-      .inner h2, .inner p {
+      .inner-error h2, .inner-error p {
         text-align: center; } }
 
 section {
