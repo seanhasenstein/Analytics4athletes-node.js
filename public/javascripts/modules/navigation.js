@@ -25,7 +25,10 @@ const toggleDropdown = () => {
 
 menuButton.addEventListener('click', toggleOpenNav);
 liDropdown.addEventListener('click', toggleDropdown);
-sidebarNavButton.addEventListener('click', toggleOpenSidebar);
+
+if (sidebarNavButton !== null) {
+	sidebarNavButton.addEventListener('click', toggleOpenSidebar);
+}
 
 for (const label of labels) {
 	label.addEventListener('click', function() {

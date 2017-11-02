@@ -114,7 +114,10 @@ var toggleDropdown = function toggleDropdown() {
 
 menuButton.addEventListener('click', toggleOpenNav);
 liDropdown.addEventListener('click', toggleDropdown);
-sidebarNavButton.addEventListener('click', toggleOpenSidebar);
+
+if (sidebarNavButton !== null) {
+	sidebarNavButton.addEventListener('click', toggleOpenSidebar);
+}
 
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;

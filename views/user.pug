@@ -5,7 +5,7 @@ include mixins/_scottieLindseyLink
 block content
 	section.user
 		.container
-			h3 #{user.firstName}'s' Analytics:
+			h3 Your Analytics:
 			.products
 				.user-products
 
@@ -14,6 +14,10 @@ block content
 					else if user.id === '59d5a36268216426ecc854e6'
 						+scottieLindseyLink()
 					else if user.id === '59dfb8ebe24ff7430c3f46fc'
+						+scottieLindseyLink()
+					else if user.id === '59fa1e128446ae49dfd23160'
+						+scottieLindseyLink()
+					else if user.id === '59fa8cfde3a4854c967fd3de'
 						+scottieLindseyLink()
 					else
 						p We will contact you at <span>#{user.email}</span> when your analytics are ready.

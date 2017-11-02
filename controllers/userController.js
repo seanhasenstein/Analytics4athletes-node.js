@@ -24,6 +24,8 @@ exports.validateRegister = (req, res, next) => {
 		remove_extension: false,
 		gmail_remove_subaddress: false
 	});
+	req.sanitizeBody('username');
+	req.checkBody('username', 'You must supply a username.').notEmpty();
 	req.checkBody('password', 'Password cannot be blank.').notEmpty();
 	req.checkBody('password-confirm', 'Confirmed password cannot be blank.').notEmpty();
 	req.checkBody('password-confirm', 'Oops! Your passwords do not match.').equals(req.body.password);
@@ -31,7 +33,7 @@ exports.validateRegister = (req, res, next) => {
 	const errors = req.validationErrors();
 	if (errors) {
 		req.flash('error', errors.map(err => err.msg));
-		res.render('register', { title: 'Register', firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, phone: req.body.phone, flashes: req.flash() });
+		res.render('register', { title: 'Register', firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, phone: req.body.phone, username: req.body.username, flashes: req.flash() });
 		return; // stop the function from running
 	}
 	next(); // there were no errors!
@@ -42,7 +44,8 @@ exports.register = async (req, res, next) => {
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
 		email: req.body.email,
-		phone: req.body.phone
+		phone: req.body.phone,
+		username: req.body.username
 	});
 	const register = promisify(User.register, User);
 	await register(user, req.body.password);
@@ -53,6 +56,7 @@ exports.notifyAdmin = (req, res, next) => {
 	const name = req.body.firstName + ' ' + req.body.lastName;
 	const email = req.body.email;
 	const phone = req.body.phone;
+	const username = req.body.username;
 	mail.newUserNotification({
 		from: 'noreply@analytics4athletes.com',
 		to: 'Sean Hasenstein <seanhasenstein@gmail.com>', // Where to send the notification
@@ -60,7 +64,8 @@ exports.notifyAdmin = (req, res, next) => {
 		filename: 'new-registration-notifaction',
 		name,
 		email,
-		phone
+		phone,
+		username
 	});
 	next(); // pass to authController.login
 };
