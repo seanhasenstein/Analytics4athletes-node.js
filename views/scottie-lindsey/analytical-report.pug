@@ -2,7 +2,8 @@ extends layout
 
 block mainContent
 	h3 Analytical Report
-	p This report analyzes Scottie Lindsey’s field goals attempted by the play types pick and roll, transition, spot up shots, shots taken off screens, and hand offs, and finally isolation situations which made up 83% of Lindsey’s total offense in the 2016-17 season. 60% of his FGA off the dribble occurred when he drove left. Scottie shot 23/60 – 38% off jump shots going left compared to 7/17 – 41% off jump shots going right. 44% of his FGA were spot up shots where he shot 35%, of his total spot up shots, 91% of them were 3FG’s, where he shot 44/134 – 33% off catch and shoot 3’s.
+
+	p This report analyzes Scottie Lindsey’s field goals attempted by the play types pick and roll, transition, spot up shots, shots taken off screens and hands offs, and finally isolation situations which made up 83% of Lindsey’s total offense in the 2016-17 season.  60% of Lindsey’s FGA off the dribble occurred when he drove left.  Scottie shot 23/60 – 38% off jump shots going left compared to 7/17 – 41% off jump shots going right.  44% of Lindsey’s FGA were spot up shots where he shot 35%, of his total spot up shots, 91% of them were 3FG’s, where he shot 44/134 – 33% off spot up 3’s.
 
 	.stats
 		table
@@ -26,27 +27,20 @@ block mainContent
 					td Total Contested 3's
 					td 15/82
 					td 18%
-
+	.stats
+		table
+			body
 				tr
 					td All FG's Going Left
 					td 46/112
 					td 41%
-
-				tr
-					td Layups/Dunks Going Left
-					td 9/23
-					td 39%
-
 				tr
 					td All FG's Going Right
 					td 24/56
 					td 43%
-
-				tr
-					td Layups/Dunks Going Right
-					td 10/19
-					td 53%
-
+	.stats
+		table
+			body
 				tr
 					td Restricted Area
 					td 23/26
@@ -66,68 +60,103 @@ block mainContent
 					td 3FGA
 					td 56/174
 					td 32%
-
-	h5 The biggest improvements Scottie needs to make:
 	.suggestions
-		ul
-			li Finishing layups/dunks going left (9/23 - 39%)
-			li More consistency off spot up FG's from 3 (44/134 - 33%)
-			li Finish contested field goals better (58/192 - 30%)
-			li Shoot better in late shot clock situations (23/71 - 32%)
+		h5 The biggest improvements Scottie needs to make:
+		.inner
+			ol
+				li Finishing layups/dunks going left (9/23 - 39%)
+				li More consistency off spot up FG's from 3 (44/134 - 33%)
+				li Finish contested field goals better (58/192 - 30%)
+				li Shoot better in late shot clock situations (23/71 - 32%)
 
-	.stats
-		table
-			tbody
-				tr
-					td Total FGA
-					td 132/333
-					td 40%
+		.stats
+			.col-50
+				table
+					tbody
+						tr
+							td.title Driving Left
+						tr
+							
+							td 20% Layups - 9/23 - 29%
+						tr
+							td 26% Floaters - 14/29 - 49%
+						tr
+							td 54% Jump Shots - 23/60 - 38%
+			.col-50
+				table
+					tbody
+						tr
+							td.title Driving Right
+						tr
+							td 34% layups - 10/19 - 53%
+						tr
+							td 36% Floaters - 7/20 - 35%
+						tr
+							td 30% Jump Shots - 7/17 - 41%
 
-				tr
-					td Assisted &amp; Non-Contested FGA
-					td 56/112
-					td 50%
+		.stats
+			table
+				tbody
+					tr
+						td 65% of Lindsey’s FGA off ball screens were jump shots where he shot 25/55 – 45%
+					tr
+						td 59% of Lindsey’s FGA running off ball screens were jump shots where he shot 19/48 – 40%
 
-				tr
-					td Assisted &amp; Contested FGA
-					td 30/102
-					td 29%
+		p Late Shot clock situations Lindsey settles for jump shots.  49% of Scottie’s late shot clock FGA were 3FG’s, where he shot 7/35 – 20%.  Compared to 9/19 – 47% when he gets in the paint in late shot clock situations.
 
-				tr
-					td Non-Assisted &amp; Contested FGA
-					td 23/72
-					td 32%
+		p Lindsey is a jump shooter all the way, 67% of his total FGA were jump shots, shooting 77/222 – 35%.  Scottie is most comfortable from the Right Wing 3 where he shot 25/60 – 42% last season, and only shot 5/20 – 25% from the corner 3’s.  Scottie shoots 49/109 – 45% on non-contested jumps shots compared to 28/113 – 25% when his jump shots are contested.
 
-				tr
-					td Non-Assisted &amp; Non-Contested FGA
-					td 18/27
-					td 67%
+	//- .stats
+	//- 	table
+	//- 		tbody
+	//- 			tr
+	//- 				td Total FGA
+	//- 				td 132/333
+	//- 				td 40%
 
-				tr
-					td Total 3FGA
-					td 56/174
-					td 32%
+	//- 			tr
+	//- 				td Assisted &amp; Non-Contested FGA
+	//- 				td 56/112
+	//- 				td 50%
 
-				tr
-					td Assisted &amp; Non-Contested 3FGA
-					td 37/85
-					td 44%
+	//- 			tr
+	//- 				td Assisted &amp; Contested FGA
+	//- 				td 30/102
+	//- 				td 29%
+
+	//- 			tr
+	//- 				td Non-Assisted &amp; Contested FGA
+	//- 				td 23/72
+	//- 				td 32%
+
+	//- 			tr
+	//- 				td Non-Assisted &amp; Non-Contested FGA
+	//- 				td 18/27
+	//- 				td 67%
+
+	//- 			tr
+	//- 				td Total 3FGA
+	//- 				td 56/174
+	//- 				td 32%
+
+	//- 			tr
+	//- 				td Assisted &amp; Non-Contested 3FGA
+	//- 				td 37/85
+	//- 				td 44%
 					
-				tr
-					td Assisted &amp; Contested 3FGA
-					td 14/71
-					td 20%
+	//- 			tr
+	//- 				td Assisted &amp; Contested 3FGA
+	//- 				td 14/71
+	//- 				td 20%
 
-				tr
-					td Non-Assisted &amp; Contested 3FGA
-					td 1/11
-					td 9%
+	//- 			tr
+	//- 				td Non-Assisted &amp; Contested 3FGA
+	//- 				td 1/11
+	//- 				td 9%
 
-				tr
-					td Non-Assisted &amp; Non-Contested 3FGA
-					td 4/7
-					td 57%
+	//- 			tr
+	//- 				td Non-Assisted &amp; Non-Contested 3FGA
+	//- 				td 4/7
+	//- 				td 57%
 
-	p 52% of Scottie's FGA were 3FGA, and he shot 32% from 3. To better analyze the quality of his 3FGA's you want to analyze the quality of shots off the dribble, assisted, and contested. 64% of his shots were assisted on, and 89% of his 3FGA were assisted on. Overall, he shot 5% from 3 on assisted 3FG's compared to non-assisted 3FG's. He also shot 27% better on 3FGA not contested on compared to contested 3FGA.
-
-	//- img(src="")	
+	//- p 52% of Scottie's FGA were 3FGA, and he shot 32% from 3. To better analyze the quality of his 3FGA's you want to analyze the quality of shots off the dribble, assisted, and contested. 64% of his shots were assisted on, and 89% of his 3FGA were assisted on. Overall, he shot 5% from 3 on assisted 3FG's compared to non-assisted 3FG's. He also shot 27% better on 3FGA not contested on compared to contested 3FGA.

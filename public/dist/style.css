@@ -1836,14 +1836,13 @@ section.contact {
       margin-top: 0;
       text-align: center;
       font-weight: 700; }
-    .product-home .content h5 {
-      font-weight: 700; }
     .product-home .content p {
-      text-align: left; }
+      text-align: left;
+      margin: 50px 0 0; }
     .product-home .content ul li {
       text-align: left; }
     .product-home .content .stats {
-      margin: 45px 0;
+      margin: 70px 0;
       text-align: center; }
       .product-home .content .stats:before, .product-home .content .stats:after {
         display: table;
@@ -1853,6 +1852,13 @@ section.contact {
         box-sizing: border-box; }
       .product-home .content .stats:after {
         clear: both; }
+      .product-home .content .stats .col-50 {
+        width: 50%;
+        float: left; }
+        @media screen and (max-width: 600px) {
+          .product-home .content .stats .col-50 {
+            width: 100%;
+            float: none; } }
       .product-home .content .stats table {
         text-align: left;
         display: inline-block; }
@@ -1869,6 +1875,9 @@ section.contact {
             .product-home .content .stats table td {
               font-size: 0.8125rem;
               padding: 10px 15px; } }
+          .product-home .content .stats table td.title {
+            font-weight: 800;
+            text-align: center; }
           .product-home .content .stats table td:first-child {
             color: #232527; }
       .product-home .content .stats p {
@@ -1929,26 +1938,39 @@ section.contact {
         .product-home .content .workout ul.explanation li {
           margin: 20px 0; }
     .product-home .content .suggestions {
-      display: inline-block;
-      background-color: #f7f9fa;
-      padding: 10px 50px; }
-      @media screen and (max-width: 600px) {
-        .product-home .content .suggestions {
-          display: block;
-          background-color: #fff;
-          padding: 0; } }
+      margin: 100px 0 0; }
+      .product-home .content .suggestions h5 {
+        font-weight: 700; }
+      .product-home .content .suggestions p, .product-home .content .suggestions table {
+        text-align: center; }
       .product-home .content .suggestions p {
-        margin-top: 0; }
-      .product-home .content .suggestions ul {
+        margin: 70px 0 0; }
+      .product-home .content .suggestions table {
+        margin: 10px 0; }
+      .product-home .content .suggestions .inner {
         display: inline-block;
-        list-style-type: disc;
-        padding: 0 0 0 20px; }
+        background-color: #f7f9fa;
+        padding: 10px 50px; }
         @media screen and (max-width: 600px) {
-          .product-home .content .suggestions ul {
-            display: block; } }
-        .product-home .content .suggestions ul li {
-          margin: 20px 0;
-          text-align: left; }
+          .product-home .content .suggestions .inner {
+            display: block;
+            background-color: #fff;
+            padding: 0; } }
+        .product-home .content .suggestions .inner p {
+          margin-top: 0; }
+        .product-home .content .suggestions .inner ol {
+          display: inline-block;
+          list-style-type: decimal;
+          padding: 0 0 0 30px;
+          letter-spacing: 0.2px;
+          margin: 0; }
+          @media screen and (max-width: 600px) {
+            .product-home .content .suggestions .inner ol {
+              display: block; } }
+          .product-home .content .suggestions .inner ol li {
+            margin: 20px 0;
+            padding: 0 0 0 10px;
+            text-align: left; }
   .product-home .video-container {
     position: relative;
     padding-bottom: 56.25%;

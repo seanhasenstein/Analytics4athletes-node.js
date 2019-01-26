@@ -101,7 +101,7 @@ exports.update = async (req, res) => {
 exports.scottieLindseyPermission = (req, res, next) => {
 	const userID = req.user._id;
 	const stringID = userID.toString();
-	if (stringID === '59bfdcb9e4968939bbf5e258' || '59fa1e128446ae49dfd23160' || '59fa8cfde3a4854c967fd3de' ) {
+	if (stringID === '59bfdcb9e4968939bbf5e258' || '59fa1e128446ae49dfd23160' || '59fa8cfde3a4854c967fd3de' || '5a0a0fd7a68ae86235186787' ) {
 		next(); // keep it going!
 		return;
 	}

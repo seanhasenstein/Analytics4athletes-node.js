@@ -31,11 +31,11 @@ exports.workoutsOffBallScreens = (req, res) => {
 };
 
 exports.visualBreakdownPickAndRoll = (req, res) => {
-	res.render('./scottie-lindsey/visual-breakdown-pick-and-roll', { title: 'Pick &amp; Roll Visual Breakdown' });
+	res.render('./scottie-lindsey/visual-breakdown-pick-and-roll', { title: 'Pick & Roll Visual Breakdown' });
 };
 
 exports.workoutsPickAndRoll = (req, res) => {
-	res.render('./scottie-lindsey/workouts-pick-and-roll', { title: 'Pick &amp; Roll Workouts' });
+	res.render('./scottie-lindsey/workouts-pick-and-roll', { title: 'Pick & Roll Workouts' });
 };
 
 exports.visualBreakdownShotClock = (req, res) => {
